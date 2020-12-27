@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  gd-portal-dev:
+    container_name: gd-portal-dev
+    command: npm run start
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    volumes:
+      - .:/app
+      - nodemodules:/app/node_modules
+    ports:
+      - 8080:8080
+    stdin_open: true
+
+volumes:
+    nodemodules:

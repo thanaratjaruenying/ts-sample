@@ -1,0 +1,92 @@
+@import '../../global.color.scss';
+
+.leftContainer {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    margin: 0px 9px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 7px 19px;
+    color: $white;
+  }
+
+  a:active,
+  :focus {
+    @extend .activatedLink;
+  }
+
+  a:hover {
+    background-color: $primaryColorHover;
+    color: $white !important;
+    border-radius: 25px;
+  }
+}
+
+.rightContainer {
+  width: 20%;
+}
+
+.activatedLink {
+  background-color: $white;
+  color: $primaryColorActive !important;
+  border-radius: 25px;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primaryColor;
+  transition: all 0.7s ease-in;
+  padding: 0px 9px;
+  font-weight: bold;
+
+  @extend .specific;
+}
+
+.profile {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  color: $white;
+
+  img {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  div {
+    padding: 7px 19px;
+  }
+}
+
+.specific {
+  color: $white !important;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+
+@media screen and (max-width: 768px) {
+  .leftContainer, .rightContainer {
+    font-size: smaller;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .leftContainer, .rightContainer {
+    font-size: xx-small;
+    padding: 3px 7px;
+  }
+}

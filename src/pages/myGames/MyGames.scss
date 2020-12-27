@@ -1,0 +1,35 @@
+@import '../../global.color.scss';
+
+.myGameContent {
+  --background: $background;
+  background-color: $background;
+}
+
+.myGamesContainer {
+  background-color: $background;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  margin: 17px 0px;
+}
+
+.myGamesChild {
+  display: flex;
+  width: 61%;
+}
+
+.dropdownListChild {
+  label {
+    padding: 0px 11px;
+  }
+
+  @extend .myGamesChild;
+}
+
+.middleChild {
+  padding: 0px 11px;
+  justify-content: space-between;
+  align-items: center;
+
+  @extend .myGamesChild;
+}

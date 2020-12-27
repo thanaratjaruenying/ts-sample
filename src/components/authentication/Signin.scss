@@ -1,0 +1,85 @@
+@import '../../global.color.scss';
+
+.signinContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $background;
+}
+
+.signinChild {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 460px;
+  width: 50%;
+  background-color: white;
+  padding: 35px;
+  border-radius: 5px;
+}
+
+.signinTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.inputSigninPage {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 3px;
+    font-weight: bold;
+  }
+
+  input {
+    border: 1px solid #d1d5db;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px;
+  }
+}
+
+.forgotLink {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+  margin-top: 3px;
+
+  a {
+    color: #6b7280;
+    text-decoration: unset;
+  }
+}
+
+.signinBottom {
+  font-size: small;
+  margin-top: 15%;
+
+  .signinButton {
+    font-size: small;
+    align-items: center;
+
+    --border-radius: 19px;
+  }
+
+  .child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --ion-grid-column-padding: 0px;
+
+    :first-child {
+      color: #6b7280;
+      text-decoration: unset;
+    }
+
+    a {
+      text-decoration: unset;
+    }
+  }
+}
