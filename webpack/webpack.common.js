@@ -36,7 +36,6 @@ module.exports = {
               },
             },
           },
-          'css-modules-typescript-loader',
           {
             loader: 'css-loader',
             options: {
