@@ -8,7 +8,6 @@ const logo = require('../../resources/svg/logo.svg');
 const personOutline = require('../../resources/svg/personOutline.svg');
 
 export default function NavBar() {
-  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
   const history = useHistory();
   const { pathname } = useLocation();
   const auth = useAuth();
