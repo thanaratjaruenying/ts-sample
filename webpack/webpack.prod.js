@@ -1,7 +1,5 @@
-// const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -24,16 +22,6 @@ module.exports = merge(common, {
         minifyCSS: true,
         minifyURLs: true,
       },
-    }),
-    // new webpack.optimize.MinChunkSizePlugin({
-    //   minChunkSize: 100000, // Minimum number of characters
-    // }),
-    // new webpack.optimize.LimitChunkCountPlugin({
-    //   maxChunks: 3,
-    // }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css',
     }),
   ],
   optimization: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useAuth } from '../../services/authentication/AuthContext';
 
-import './Signin.scss';
+import styles from './Signin.module.scss';
 
 export default function Signin() {
   const auth = useAuth();
@@ -17,17 +17,38 @@ export default function Signin() {
   };
 
   return (
-    <div className='signinContainer'>
-
-      <p>Sign in</p>
-
+    <div>
       <div>
-        <span>Don't have an account?&nbsp;</span>
-        <Link to='/signup'>Register</Link>
+        <div className={styles.signinContainer}>
+          <div className={styles.signinChild}>
+            <div className={styles.signinTitle}>
+              <p>Sign in</p>
+            </div>
+            <div className={styles.inputSigninPage}>
+              <p>Email</p>
+              <input type='text' />
+            </div>
+            <div className={styles.inputSigninPage}>
+              <p>Password</p>
+              <input type='text' />
+            </div>
+            <div className={styles.forgotLink}>
+              <Link to='/forget-password'>Forgot password</Link>
+            </div>
+            <div className={styles.signinBottom}>
+              <div className={styles.child}>
+                <div>
+                  <span>Don't have an account?&nbsp;</span>
+                  <Link to='/signup'>Register</Link>
+                </div>
+                <button className={styles.signinButton} onClick={signin}>
+                  Sign in
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button className='signinButton' onClick={signin}>
-        Sign in
-      </button>
     </div>
   );
 }

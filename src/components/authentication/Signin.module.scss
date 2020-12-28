@@ -1,13 +1,13 @@
-@import '../../global.color.scss';
+@import '../../global.module.scss';
 
-.signupContainer {
+.signinContainer {
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #f3f4f6;
+  background-color: $background;
 }
 
-.signupChild {
+.signinChild {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,7 +19,7 @@
   border-radius: 5px;
 }
 
-.signupTitle {
+.signinTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
   font-size: larger;
 }
 
-.inputSignupPage {
+.inputSigninPage {
   display: flex;
   flex-direction: column;
 
@@ -56,27 +56,30 @@
   }
 }
 
-.signupBottom {
+.signinBottom {
   font-size: small;
   margin-top: 15%;
+
+  .signinButton {
+    font-size: small;
+    align-items: center;
+
+    --border-radius: 19px;
+  }
 
   .child {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: small;
     --ion-grid-column-padding: 0px;
-  }
 
-  .signupButton {
-    font-size: small;
+    :first-child {
+      color: #6b7280;
+      text-decoration: unset;
+    }
 
-    --border-radius: 19px;
-  }
-
-  .cancelButton {
-    font-size: small;
-    border: 1px solid $primaryColor;
-    border-radius: 19px;
+    a {
+      text-decoration: unset;
+    }
   }
 }

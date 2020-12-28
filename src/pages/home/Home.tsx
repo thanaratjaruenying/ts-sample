@@ -1,8 +1,9 @@
 import React from 'react';
-import './Home.scss';
+
+import styles from './Home.module.scss';
 
 export default function HomePage() {
   return (
-    <div className='addgame'>HomePage</div>
+    <div className={styles.myGamesContainer}>myGamesContainer</div>
   );
 }

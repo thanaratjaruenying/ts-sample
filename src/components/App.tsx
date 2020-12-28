@@ -1,17 +1,16 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 import { ProvideAuthContext } from '../services/authentication/AuthContext';
 import { RouterController } from './route/Router';
-import './App.scss';
-import '../global.color.scss';
+import './App.css';
+import '../global.module.scss';
 
 export default function routeConfig() {
   return (
-    <ProvideAuthContext>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ProvideAuthContext>
         <RouterController />
-      </BrowserRouter>
-    </ProvideAuthContext>
-
+      </ProvideAuthContext>
+    </BrowserRouter>
   );
 }
