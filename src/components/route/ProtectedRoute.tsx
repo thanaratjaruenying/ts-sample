@@ -7,6 +7,7 @@ export default function ProtectedRoute({ children, ...rest }: any) {
 
   return (
     <Route
+      exact
       {...rest}
       render={({ location }) =>
         auth.user ? (
