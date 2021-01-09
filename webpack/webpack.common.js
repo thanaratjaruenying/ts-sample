@@ -77,5 +77,6 @@ module.exports = {
     path: path.resolve(__dirname, '../build'),
     pathinfo: false,
     publicPath: '/',
+    assetModuleFilename: 'images/[hash][ext][query]'
   },
 };

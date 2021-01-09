@@ -6,12 +6,3 @@ $primaryColorActive: #F26F21;
 $primaryColorDisabled: #ffd9b3;
 $white: #fff;
 $background: #f3f4f6;
-
-.mainContainer {
-  --padding-bottom: 5vw;
-  --padding-end: 13vw;
-  --padding-start: 13vw;
-  --padding-top: 5vw;
-  --background: $background;
-  background-color: $background;
-}

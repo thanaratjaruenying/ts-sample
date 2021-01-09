@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 import { useAuth } from '../../services/authentication/AuthContext';
 import styles from './NavBar.module.scss';
-
-const logo = require('../../resources/svg/logo.svg');
-const personOutline = require('../../resources/svg/personOutline.svg');
 
 export default function NavBar() {
   const history = useHistory();
@@ -24,7 +22,7 @@ export default function NavBar() {
   return (
     <header className={styles.navbar}>
       <div className={styles.leftContainer}>
-        <img onClick={() => history.replace('/')} src={logo} alt='logo' />
+        <DeleteIcon onClick={() => history.replace('/')} />
         <Link className={isActivated('/report')} to='/report'>
           Report
         </Link>
@@ -45,7 +43,6 @@ export default function NavBar() {
               Log out
             </button>
             <div className={styles.profile} >
-              <img src={personOutline} alt='person' />
               <span>First Lastname</span>
             </div>
           </>
